@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using System.Linq
+@using WeddingPlanner.Models;
+@model WeddingPlanner.Models.Dashboard;
+
+<h1 class="wedding_font">Wedding Planner</h1>
+<img id="wedding_couple" src="../images/weddingimg.jpg" alt="wedding couple">
+<div id="main">
+    <div class="header">
+        <h3>Welcome, @Model.User.first_name</h3>
+        <p class="logout"><a href="/logout">Logout</a></p>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Wedding</th>
+                <th>Date</th>
+                <th>Guests</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var wed in Model.Weddings)
+            {
+                
+            
+                <tr>
+                    <td><a href="show/@wed.weddingId">@wed.bride and @wed.groom</a></td>
+                    <td>@wed.date.ToString("d")</td>
+                    <td>@wed.guests.Count</td>
+                    @{
+                        if(Model.User.userId == wed.userId)
+                        {
+                            <td><a href="/remove/@wed.weddingId">Delete</a></td>
+                        }
+                        else
+                        {
+                            if(wed.guests.FirstOrDefault(gst => gst.userId == Model.User.userId) == null)
+                            {
+                                <td><a href="rsvp/@wed.weddingId">RSVP</a></td>
+                            }
+                            else
+                            {
+                                <td><a href="unrsvp/@wed.weddingId">Un RSVP</a></td>
+                            }
+                        }
+                        
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <a href="/plan"><button class="submt">Create new Event!</button></a>
+</div>

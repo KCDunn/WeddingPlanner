@@ -1,0 +1,392 @@
+/*Write all of your CSS here*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../images/weddingflowers1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Patua One', cursive;
+    /* font-family: 'Cardo', serif; */
+    /* font-family: 'Sorts Mill Goudy', serif; */
+}
+a {
+    color: rgb(180, 36, 36);
+}
+a:hover{
+    color: peru;
+}
+h1, h2, h3, th{
+    color: rgb(43, 73, 30);
+    text-shadow: 0px 0px 3px white;
+    /* font-family: 'Cinzel+Decorative', cursive; */
+}
+h1{
+    /* font-family: 'Great Vibes', cursive; */
+    /* font-family: 'Tangerine', cursive; */
+    /* font-family: 'Playball', cursive; */
+    /* font-family: 'Niconne', cursive; */
+    font-family: 'Ruthie', cursive;
+    font-size: 3em;
+}
+
+h2{
+    font-family: 'Tangerine', serif;
+    font-size: 2.3em;
+}
+h3{
+    font-family: 'Tangerine', serif;
+    font-size: 2.4em;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.submt:hover{
+    background-color: rgb(36, 58, 25);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 15px;
+}
+h3{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.dashboard{
+    /* width: 70px; */
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+.logout{
+    /* width: 60px; */
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-left: 20px;
+}
+#guestlist{
+    display: block;
+    margin-top: 20px;
+    clear: both;
+    
+}
+#weddingof{
+    text-align: center;
+}
+span{
+    color: purple;
+}
+
+@media (max-width: 425px) {
+    
+    
+    #registration{
+        width: 100%;
+    }
+    .log_reg{
+        width: 95%;
+        display: block;
+        margin: 20px auto;
+        padding: 10px 0px;
+    }
+    /* h1, h2, h3{
+        color: rgb(62, 105, 42);
+        text-shadow: 0px 0px 3px white;
+    } */
+    h1{
+        background-color: rgb(190, 175, 166);
+    }
+    #main{
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+    #wedding_couple{
+        width: 100%;
+        display: block;
+        border: 2px solid grey;
+        margin: auto;
+    }
+    #guestlist{
+        margin-top: 25px;
+        text-align: center;
+    }
+    #guests{
+        margin-top: 25px;
+    }
+    #guestlist ul{
+        width: 227px;
+        margin: 25px auto;
+        list-style: none;
+        background-image: url("../images/wedding_small_bk1.jpg");
+        background-repeat: repeat-y;
+        background-position: center;
+        box-shadow: 0px 0px 4px rgb(44, 41, 41);
+    }
+    
+    #guestlist li{
+        margin-top: 6px;
+    }
+    h1, h2, h3{
+        text-align: center;
+    }
+    
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(161, 87, 52);
+        box-shadow: 1px 1px 5px rgb(105, 91, 83);
+        border-radius: 8px;
+    }
+    button {
+        width: 100%;
+        background-color: rgb(62, 105, 42);
+        color: white;
+        padding: 14px;
+        border-radius: 8px;
+    }
+    #seats{
+        border: 2px solid rgb(187, 184, 184);
+        border-radius: 8px;
+        padding: 5px;
+        width: 300px;
+    }
+    
+}
+
+
+
+@media (min-width: 426px) {
+    /* body{
+        background-image: url("../images/weddingflowers1.jpg");
+        background-repeat: no-repeat;
+        background-position: center
+    } */
+    h1{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.0), rgb(190, 175, 166), rgba(252, 188, 199, 0.0));
+    }
+    
+    h1, h2{
+        text-align: center;
+    }
+    /* h1, h2, h3{
+        color: rgb(62, 105, 42);
+        text-shadow: 0px 0px 3px white;
+    } */
+    
+    
+    #wedding_couple{
+        width: 300px;
+        display: block;
+        margin: auto;
+        border: 2px solid rgb(187, 184, 184);
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .log_reg{
+        width: 400px;
+        margin: 40px auto;
+    }
+    #main{
+        width: 400px;
+        margin: 20px auto;
+    }
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(161, 87, 52);
+        box-shadow: 1px 1px 5px rgb(105, 91, 83);
+        border-radius: 8px;
+    }
+    button {
+        background-color: rgb(62, 105, 42);
+        color: white;
+        padding: 14px 20px;
+        border-radius: 6px;
+    }
+    
+    #guestlist ul{
+        width: 227px;
+        padding: 10px 1px 10px 10px;
+        
+        border-radius: 4px;
+        list-style-position: inside;
+        list-style-type: none;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-image: url("../images/wedding_small_bk1.jpg");
+        background-repeat: repeat-y;
+        background-position: center;
+        box-shadow: 0px 0px 4px rgb(44, 41, 41);
+    }
+    #guestlist li{
+        margin-top: 6px;
+        margin-left: 60px;
+    }
+   
+    #guests_image{
+        width: 260px;
+        display: block;
+        margin: auto;
+    }
+
+    #seats{
+        border: 2px solid rgb(187, 184, 184);
+        border-radius: 8px;
+        padding: 5px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 770px) {
+    #registration{
+        width: 650px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .log_reg{
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    
+    #main{
+        width: 700px;
+        margin: 20px auto;
+    }
+    #wedding_couple{
+        width: 390px;
+        display: block;
+        margin: auto;
+    }
+    form{
+        width: 295px;
+        margin-top: 20px;
+    }
+    
+    #plan{
+        margin: 55px auto;
+        clear: both;
+    }
+    
+    
+}
+
+@media (min-width: 1020px) {
+    body{
+        background-color: rgb(211, 207, 207);
+    }
+    #registration{
+        width: 650px;
+        margin: auto;
+    }
+    form{
+        width: 295px;
+        margin-top: 40px;
+    }
+    #main{
+        margin-top: 50px;
+    }
+    /* h1{
+        background-color: rgb(190, 175, 166);
+    } */
+    h2{
+        margin-bottom: 20px;
+    }
+    #guests{
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    #guestlist ul{
+        width: 200px;
+        height: 300px;
+        color: rgb(78, 29, 44);
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0;
+        margin-left: 130px;
+        background: url("../images/paper2.jpeg");
+        background-size: 280px;
+        background-blend-mode: overlay;
+        border: 2px solid rgb(187, 184, 184);
+        border-radius: 8px;
+        padding: 5px;
+        background-color: rgba(253, 253, 253, 0.507);
+        overflow: scroll;
+    }
+    #guestlist li{
+        margin-left: 30px;
+    }
+    #guests_image{
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        margin: auto;
+       
+    }
+    #seats{
+        width: 200px;
+        /* border: 5px solid gray;
+        border-radius: 8px; */
+    }
+}
+
+@media (min-width: 1440px) {
+    #registration{
+        width: 1200px;
+        margin: auto;
+    }
+    .log_reg{
+        width: 450px;
+        margin-left: 140px;
+    }
+    form{
+        width: 400px;
+    }
+    #guestlist ul{
+        width: 270px;
+        height: 408px;
+        margin-left: 50px;
+        padding-left: 50px;
+        background-size: 350px;
+        overflow: scroll;
+    }
+    #guests_image{
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        
+    }
+    #seats{
+        width: 270px;
+        /* border: 5px solid gray;
+        border-radius: 8px; */
+    }
+}

@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 id="weddingof">The Wedding Of</h1>
+<div id="main">
+    
+    <h2>@Model.bride & @Model.groom</h2>
+
+    <div id="guestlist">
+        <h2>Date: @Model.date.ToString("D")</h2>
+        
+        <ul>
+            <h2 id="guests">Guests:</h2>
+            @foreach(var gst in @Model.guests)
+            {
+                <li>@gst.Guest.first_name @gst.Guest.last_name</li>
+            }
+        </ul>
+        <div id=guests_image>
+            <img id="seats" src="../images/seating2.jpg" alt="decorated chairs">
+        </div>
+    </div>
+    
+    <br>
+    <p class="logout"><a href="/logout">Logout</a></p>
+    <p class="dashboard"><a href="/dashboard">Dashboard</a></p>
+</div>

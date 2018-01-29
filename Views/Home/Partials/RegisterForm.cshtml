@@ -1,0 +1,29 @@
+
+@model WeddingPlanner.Models.RegisterUser
+
+
+<form asp-action="Register" asp-controller="Home" method="post">
+    <label asp-for="first_name"></label>
+    <span asp-validation-for="first_name"></span>
+    <input asp-for="first_name"/>
+
+    <label asp-for="last_name"></label>
+    <span asp-validation-for="last_name"></span>
+    <input asp-for="last_name"/>
+
+    <label asp-for="email"></label>
+    <span asp-validation-for="email"></span>
+    <input asp-for="email"/>
+
+    <label asp-for="password"></label>
+    <span asp-validation-for="password"></span>
+    <input asp-for="password"/>
+    <br>
+
+    <label asp-for="confirm"></label>
+    <span asp-validation-for="confirm"></span>
+    <input asp-for="confirm"/>
+    <br>
+    
+    <button class="submt" type="submit">Register</button>
+</form>

@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="wedding_font">Wedding Planner</h1>
+<div id=registration>
+    <div class="log_reg">
+        <h3>Register: </h3>
+        @Html.Partial("./Partials/RegisterForm")
+    </div>
+
+    <div class="log_reg">
+        <h3>Login: </h3>
+        @Html.Partial("./Partials/LoginForm")
+    </div>
+</div>
