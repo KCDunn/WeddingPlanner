@@ -1,6 +1,8 @@
 using System;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +15,6 @@ namespace WeddingPlanner
     public class Startup
     {
         public IConfiguration Configuration;
- 
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -29,16 +30,16 @@ namespace WeddingPlanner
             // Add framework services.
             services.AddDbContext<WeddingContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddMvc();
-            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            loggerFactory.AddConsole();
-            app.UseDeveloperExceptionPage();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
             app.UseStaticFiles();
-            app.UseSession();
             app.UseMvc();
         }
     }
